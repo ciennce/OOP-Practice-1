@@ -9,9 +9,9 @@ namespace OOP_Practice_1.Bank
 
         public Account(string name, string iban, int balance)
         {
-            Name = name;
-            Iban = iban;
-            Balance = balance;
+            this.Name = name;
+            this.Iban = iban;
+            this.Balance = balance;
         }
 
         public void Payout()
