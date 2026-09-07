@@ -9,37 +9,15 @@ namespace OOP_Practice_1.Gui
             while (true)
             {
                 char key = GetMenuInput();
+                Console.Clear();
                 switch (key)
                 {
-                    case '1':
-                        Console.Clear();
-                        Account account = db.CreateAccount();
-                        break;
-
-                    case '2':
-                        Console.Clear();
-                        Account? found = db.CheckUser();
-                        found?.Deposit();
-                        break;
-
-                    case '3':
-                        Console.Clear();
-                        Account? found1 = db.CheckUser();
-                        found1?.Payout();
-                        break;
-
-                    case '4':
-                        Console.Clear();
-                        db.ShowBalance();
-                        break;
-
-                    case '5':
-                        Console.Clear();
-                        db.ShowAllAccounts();
-                        break;
-
-                    case '6':
-                        break;
+                    case '1': db.CreateAccount(); break;
+                    case '2': db.CheckUser()?.Deposit(); break;
+                    case '3': db.CheckUser()?.Payout(); break;
+                    case '4': db.ShowBalance(); break;
+                    case '5': db.ShowAllAccounts(); break;
+                    case '6': break;
                 }
             }
         }

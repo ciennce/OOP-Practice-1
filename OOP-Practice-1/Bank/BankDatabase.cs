@@ -24,13 +24,8 @@ namespace OOP_Practice_1.Bank
 
         public void ShowBalance()
         {
-            CheckUser();
             Account? found = CheckUser();
-            if (found != null)
-            {
-                Console.WriteLine($"Balance: {found.Balance}$");
-            }
-            GUI.AwaitEnter();
+            Console.WriteLine($"Balance: {found?.Balance}$");
         }
 
         private static string IbanGenerator(Random random)
