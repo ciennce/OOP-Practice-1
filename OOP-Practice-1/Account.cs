@@ -1,19 +1,19 @@
 ﻿namespace OOP_Practice_1
 {
-    internal class Account
+    class Account
     {
         public string Name { get; set; }
-        public int Iban { get; set; }
+        public string Iban { get; set; }
         protected int Balance { get; set; }
 
-        public Account(string Name, int Iban, int Balance)
+        public Account(string Name, string Iban, int Balance)
         {
             this.Name = Name;
             this.Iban = Iban;
             this.Balance = Balance;
         }
 
-        public void Payout(string Name, int Iban, int PayoutBalance)
+        public void Payout(string Name, string Iban, int PayoutBalance)
         {
             if(Name == this.Name || Iban == this.Iban)
             {
@@ -30,7 +30,7 @@
             }
         }
 
-        public void Deposti(string Name, int Iban, int DeopositBalance)
+        public void Deposti(string Name, string Iban, int DeopositBalance)
         {
             if (Name == this.Name || Iban == this.Iban)
             {
