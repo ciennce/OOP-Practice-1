@@ -17,13 +17,34 @@
         {
             if(Name == this.Name || Iban == this.Iban)
             {
-                Balance += PayoutBalance;
-            }
-            else
+                if (PayoutBalance > this.Balance)
+                {
+                    Console.WriteLine("Insufficient funds.");
+                }else
+                {
+                    this.Balance -= PayoutBalance;
+                }
+            }else
             {
                 Console.WriteLine("This Account or Iban does not exit. Please try again.");
             }
         }
 
+        public void Deposti(string Name, int Iban, int DeopositBalance)
+        {
+            if (Name == this.Name || Iban == this.Iban)
+            {
+                if (DeopositBalance < 0)
+                {
+                    Console.WriteLine("Invalid amount.");
+                }else
+                {
+                    this.Balance += DeopositBalance;
+                }
+            }else
+            {
+                Console.WriteLine("This Account or Iban does not exit. Please try again.");
+            }
+        }
     }
 }
