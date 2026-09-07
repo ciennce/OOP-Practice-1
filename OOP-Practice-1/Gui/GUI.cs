@@ -1,16 +1,9 @@
 ﻿using OOP_Practice_1.Bank;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace OOP_Practice_1.Gui
 {
     class GUI
     {
         BankDatabase db = new BankDatabase();
-
         public void Run()
         {
             while (true)
@@ -32,10 +25,7 @@ namespace OOP_Practice_1.Gui
                     case '3':
                         Console.Clear();
                         Account? found1 = db.CheckUser();
-                        if (found1 != null)
-                        {
-                            found1.Payout();
-                        }
+                        found1?.Payout();
                         break;
 
                     case '4':
@@ -49,7 +39,6 @@ namespace OOP_Practice_1.Gui
                         break;
 
                     case '6':
-                        Environment.Exit(0);
                         break;
                 }
             }

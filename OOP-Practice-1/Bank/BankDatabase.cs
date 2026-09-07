@@ -1,5 +1,4 @@
 ﻿using OOP_Practice_1.Gui;
-
 namespace OOP_Practice_1.Bank
 {
     class BankDatabase
@@ -25,14 +24,9 @@ namespace OOP_Practice_1.Bank
 
         public void ShowBalance()
         {
-            Console.WriteLine("Iban:");
-            string iban = Console.ReadLine() ?? "";
-            Account? found = Database.FirstOrDefault(x => x.Iban == iban);
-            if (found == null)
-            {
-                Console.WriteLine("Iban not found.");
-            }
-            else
+            CheckUser();
+            Account? found = CheckUser();
+            if (found != null)
             {
                 Console.WriteLine($"Balance: {found.Balance}$");
             }

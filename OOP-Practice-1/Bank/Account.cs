@@ -1,19 +1,17 @@
 ﻿using OOP_Practice_1.Gui;
-using System.Xml.Linq;
-
 namespace OOP_Practice_1.Bank
 {
     class Account
     {
         public string Name { get; set; }
         public string Iban { get; set; }
-        public int Balance { get; set; }
+        public int Balance { get; private set; }
 
-        public Account(string Name, string Iban, int Balance)
+        public Account(string name, string iban, int balance)
         {
-            this.Name = Name;
-            this.Iban = Iban;
-            this.Balance = Balance;
+            Name = name;
+            Iban = iban;
+            Balance = balance;
         }
 
         public void Payout()
