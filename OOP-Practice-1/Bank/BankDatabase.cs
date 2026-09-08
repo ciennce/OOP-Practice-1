@@ -28,6 +28,7 @@ namespace OOP_Practice_1.Bank
             Console.WriteLine($"Balance: {found?.Balance}$");
         }
 
+
         private static string IbanGenerator(Random random)
         {
 
