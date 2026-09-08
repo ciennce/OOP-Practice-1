@@ -27,7 +27,7 @@ namespace OOP_Practice_1.Bank
             Account? found = CheckUser();
             Console.WriteLine($"Balance: {found?.Balance}$");
         }
-
+        //test
 
         private static string IbanGenerator(Random random)
         {
